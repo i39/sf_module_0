@@ -34,18 +34,20 @@ def game_core_v3(number):
     как  ни страанно от работает медленее чем разбег от случайного числа
     game-core_v2'''
 
+    count = 0
     mid = MAX // 2
     low = 0
     high = MAX
 
     while mid != number and low <= high:
+        count += 1
         if number > mid:
             low = mid + 1
         else:
             high = mid - 1
         mid = (low + high) // 2
 
-    return mid
+    return count
 
 
 def score_game(game_core):
